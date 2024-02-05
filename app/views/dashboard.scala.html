@@ -1,0 +1,158 @@
+@*
+ * This template is called from the `index` template. This template
+ * handles the rendering of the page header and body tags. It takes
+ * two arguments, a `String` for the title of the page and an `Html`
+ * object to insert into the body of the page.
+ *@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @* Here's where we render the page title `String`. *@
+        <title>Dashboard</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/supreme.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+
+        <script src="@routes.Assets.versioned("javascripts/jquery-3.7.1.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/gauge.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/main.js")" type="text/javascript"></script>
+
+    </head>
+    <body style="overflow: hidden; background-image: radial-gradient(ellipse, #290A08, #0B0303, #000000);">
+        <div style="height: 1080px; display: flex; align-items: center; justify-content: center;">
+            <div style="height: 1080px; padding-top: 40px;">
+                <table class="side-table">
+                    <tr>
+                        <td class="side-table-title-1" colspan="2">
+                            OUTSIDE
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="side-table-title-1" colspan="2">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="side-table-icon-1">
+                            <img src="@routes.Assets.versioned("images/icon-temp.png")" style="width: 120px; height: 120px;">
+                        </td>
+                        <td class="side-table-content-1">
+                            45 °F
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="side-table-title-1" colspan="2">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="side-table-icon-1">
+                            <img src="@routes.Assets.versioned("images/icon-humidity.png")" style="width: 120px; height: 120px;">
+                        </td>
+                        <td class="side-table-content-1">
+                            32 %
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="side-table-title-1" colspan="2">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="side-table-icon-1">
+                            <img src="@routes.Assets.versioned("images/icon-pressure.png")" style="width: 120px; height: 120px;">
+                        </td>
+                        <td class="side-table-content-1">
+                            1.24 ATM
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div style="height: 1080px; padding-top: 40px;">
+                <div class="div-bg-gauge-2">
+                    <canvas id="idOil"></canvas>
+                </div>
+                <div class="div-bg-gauge-2">
+                    <canvas id="idBattery"></canvas>
+                </div>
+            </div>
+            <div style="height: 1080px; padding-top: 40px;">
+                <div class="div-bg-gauge-2">
+                    <canvas id="idAir1"></canvas>
+                </div>
+                <div class="div-bg-gauge-2">
+                    <canvas id="idAir2"></canvas>
+                </div>
+            </div>
+
+            <div style="height: 1080px; padding-top: 40px;">
+                <div class="div-bg-gauge-1">
+                    <canvas id="idSpeed"></canvas>
+                </div>
+                <div style="margin-left: 5px; margin-right: 5px; width: 850px; height: 290px; display: flex; justify-content: center; align-items: center;">
+                    <canvas id="idFuel"></canvas>
+                </div>
+            </div>
+
+
+            <div style="height: 1080px; padding-top: 40px;">
+                <div class="div-bg-gauge-2">
+                    <canvas id="idRpm"></canvas>
+                </div>
+                <div class="div-bg-gauge-2">
+                    <canvas id="idCoolantTemp"></canvas>
+                </div>
+            </div>
+            <div style="height: 1080px; padding-top: 40px;">
+                <div class="div-bg-gauge-2">
+                    <canvas id="idEngineLoad"></canvas>
+                </div>
+                <div class="div-bg-gauge-2">
+                    <canvas id="idIntakeManifoldTemp"></canvas>
+                </div>
+            </div>
+            <div style="height: 1080px; padding-top: 40px;">
+                <table class="side-table">
+                    <tr>
+                        <td class="side-table-title-1" colspan="2">
+                            CABIN
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="side-table-title-1" colspan="2">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="side-table-icon-1">
+                            <img src="@routes.Assets.versioned("images/icon-temp.png")" style="width: 120px; height: 120px;">
+                        </td>
+                        <td class="side-table-content-1">
+                            45 °F
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="side-table-title-1" colspan="2">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="side-table-icon-1">
+                            <img src="@routes.Assets.versioned("images/icon-humidity.png")" style="width: 120px; height: 120px;">
+                        </td>
+                        <td class="side-table-content-1">
+                            32 %
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="side-table-title-1" colspan="2">
+                            &nbsp;
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
