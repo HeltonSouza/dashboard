@@ -19,7 +19,7 @@
         <script src="@routes.Assets.versioned("javascripts/main.js")" type="text/javascript"></script>
 
     </head>
-    <body style="overflow: hidden; background-image: radial-gradient(ellipse, #290A08, #0B0303, #000000);">
+    <body class="body-dashboard">
         <div style="height: 1080px; display: flex; align-items: center; justify-content: center;">
             <div style="height: 1080px; padding-top: 40px;">
                 <table class="side-table">
@@ -54,24 +54,12 @@
                             32 %
                         </td>
                     </tr>
-                    <tr>
-                        <td class="side-table-title-1" colspan="2">
-                            &nbsp;
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="side-table-icon-1">
-                            <img src="@routes.Assets.versioned("images/icon-pressure.png")" style="width: 120px; height: 120px;">
-                        </td>
-                        <td class="side-table-content-1">
-                            1.24 ATM
-                        </td>
-                    </tr>
                 </table>
             </div>
             <div style="height: 1080px; padding-top: 40px;">
+
                 <div class="div-bg-gauge-2">
-                    <canvas id="idOil"></canvas>
+                    <canvas id="idAir2"></canvas>
                 </div>
                 <div class="div-bg-gauge-2">
                     <canvas id="idBattery"></canvas>
@@ -82,7 +70,7 @@
                     <canvas id="idAir1"></canvas>
                 </div>
                 <div class="div-bg-gauge-2">
-                    <canvas id="idAir2"></canvas>
+                    <canvas id="idOil"></canvas>
                 </div>
             </div>
 
@@ -94,19 +82,17 @@
                     <canvas id="idFuel"></canvas>
                 </div>
             </div>
-
-
             <div style="height: 1080px; padding-top: 40px;">
                 <div class="div-bg-gauge-2">
                     <canvas id="idRpm"></canvas>
                 </div>
                 <div class="div-bg-gauge-2">
-                    <canvas id="idCoolantTemp"></canvas>
+                    <canvas id="idEngineLoad"></canvas>
                 </div>
             </div>
             <div style="height: 1080px; padding-top: 40px;">
                 <div class="div-bg-gauge-2">
-                    <canvas id="idEngineLoad"></canvas>
+                    <canvas id="idCoolantTemp"></canvas>
                 </div>
                 <div class="div-bg-gauge-2">
                     <canvas id="idIntakeManifoldTemp"></canvas>
@@ -150,7 +136,15 @@
                             &nbsp;
                         </td>
                     </tr>
-
+                    <tr>
+                        <td class="side-table-icon-1">
+                            <img src="@routes.Assets.versioned("images/icon-pressure.png")" style="width: 120px; height: 120px;">
+                        </td>
+                        <td class="side-table-content-1" style="font-size:35px;">
+                            1.24 ATM <br>
+                            1005 hPa
+                        </td>
+                    </tr>
                 </table>
             </div>
         </div>

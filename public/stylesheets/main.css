@@ -10,9 +10,8 @@ body {
 }
 
 .body-dashboard {
-    background-color: black;
-    background-position: 0 0;
-    background-repeat: no-repeat;
+    overflow: hidden;
+    background-image: radial-gradient(ellipse, #290A08, #0B0303, #000000);
 }
 
 table, caption, tbody, tfoot, thead, tr, th, td {
